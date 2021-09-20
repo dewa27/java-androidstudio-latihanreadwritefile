@@ -54,14 +54,14 @@ public class ReadWriteFileActivity extends AppCompatActivity {
         editTitle.setText("");
         editContent.setText("");
 
-        Toast.makeText(this, "Clearing file" + ReadWriteFileActivity.this.getFilesDir().getAbsolutePath(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Masukkan nama file dan isinya", Toast.LENGTH_SHORT).show();
     }
 
     private void loadData(String title) {
         String text = FileHelper.readFromFile(this, title);
         editTitle.setText(title);
         editContent.setText(text);
-        Toast.makeText(this, "Loading " + title + " data", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Menampilkan file " + title, Toast.LENGTH_SHORT).show();
     }
 
     public void openFile() {
@@ -88,12 +88,12 @@ public class ReadWriteFileActivity extends AppCompatActivity {
 
     public void saveFile() {
         if (editTitle.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Title harus diisi terlebih dahulu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nama file harus diisi terlebih dahulu", Toast.LENGTH_SHORT).show();
         } else {
             String title = editTitle.getText().toString();
             String text = editContent.getText().toString();
             FileHelper.writeToFile(title, text, this);
-            Toast.makeText(this, "Saving " + editTitle.getText().toString() + " file", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Menyimpan file " + editTitle.getText().toString(), Toast.LENGTH_SHORT).show();
         }
     }
 }

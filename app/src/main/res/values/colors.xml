@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gradient_start">#41295A</color>
     <color name="gradient_end">#2F0743</color>
-    <color name="primary">#0066ce</color>
-    <color name="primary_dark">#034385</color>
+    <color name="light_gray">#FBF6F6</color>
+    <color name="gray">#E5E9ED</color>
     <color name="mono">#0B73C6</color>
     <color name="fore">#d4cdc1</color>
 </resources>

@@ -5,57 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
+    android:backgroundTint="@null"
     android:orientation="vertical"
     tools:context=".ReadWriteFileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:minHeight="120dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="3">
 
         <Button
             android:id="@+id/new_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#0B73C6"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_resource_new"
             android:minHeight="72dip"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:text="New File"
-            app:cornerRadius="10dp" />
+            android:padding="5dp"
+            android:text="@string/btn_new"
+            android:textColor="#595656"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0dp" />
 
         <Button
             android:id="@+id/open_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#0B73C6"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_open"
             android:minHeight="72dip"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:text="Open File"
+            android:padding="5dp"
+            android:text="@string/btn_open"
+            android:textColor="#595656"
             app:cornerRadius="10dp" />
 
         <Button
             android:id="@+id/save_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:backgroundTint="#0B73C6"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_save"
             android:minHeight="72dip"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="10dp"
-            android:text="Save File"
+            android:padding="5dp"
+            android:text="@string/btn_save"
+            android:textColor="#595656"
             app:cornerRadius="10dp" />
 
     </LinearLayout>
@@ -63,8 +65,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <EditText
             android:id="@+id/edit_title"
@@ -77,21 +79,20 @@
             android:paddingTop="15dp"
             android:paddingRight="25dp"
             android:paddingBottom="15dp"
-            android:text="Name"
-            android:textColor="#2B2B2B" />
+            android:textColor="#595656" />
 
         <EditText
             android:id="@+id/edit_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
             android:autofillHints=""
             android:background="@drawable/kolom_input"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:padding="15dp"
-            android:textColor="#FBFBFB" />
+            android:textColor="#595656" />
     </LinearLayout>
 
 </LinearLayout>
