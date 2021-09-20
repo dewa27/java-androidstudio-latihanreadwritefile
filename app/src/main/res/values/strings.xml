@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">tugassatu</string>
+    <string name="app_name">Tugas Read/Write File</string>
     <string name="title_activity_main">Login</string>
     <string name="btn_new">BUAT FILE BARU</string>
     <string name="btn_save">SIMPAN FILE</string>

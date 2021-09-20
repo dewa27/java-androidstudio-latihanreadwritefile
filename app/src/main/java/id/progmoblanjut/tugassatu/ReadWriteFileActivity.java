@@ -1,5 +1,4 @@
 package id.progmoblanjut.tugassatu;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -56,7 +55,16 @@ public class ReadWriteFileActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Masukkan nama file dan isinya", Toast.LENGTH_SHORT).show();
     }
-
+    public void saveFile() {
+        if (editTitle.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Nama file harus diisi terlebih dahulu", Toast.LENGTH_SHORT).show();
+        } else {
+            String title = editTitle.getText().toString();
+            String text = editContent.getText().toString();
+            FileHelper.writeToFile(title, text, this);
+            Toast.makeText(this, "Menyimpan file " + editTitle.getText().toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
     private void loadData(String title) {
         String text = FileHelper.readFromFile(this, title);
         editTitle.setText(title);
@@ -65,10 +73,6 @@ public class ReadWriteFileActivity extends AppCompatActivity {
     }
 
     public void openFile() {
-        showList();
-    }
-
-    private void showList() {
         final ArrayList<String> arrayList = new ArrayList<String>();
         for (String file : path.list()) {
             arrayList.add(file);
@@ -84,16 +88,5 @@ public class ReadWriteFileActivity extends AppCompatActivity {
         });
         AlertDialog alert = builder.create();
         alert.show();
-    }
-
-    public void saveFile() {
-        if (editTitle.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Nama file harus diisi terlebih dahulu", Toast.LENGTH_SHORT).show();
-        } else {
-            String title = editTitle.getText().toString();
-            String text = editContent.getText().toString();
-            FileHelper.writeToFile(title, text, this);
-            Toast.makeText(this, "Menyimpan file " + editTitle.getText().toString(), Toast.LENGTH_SHORT).show();
-        }
     }
 }
